@@ -1,0 +1,41 @@
+lui x1, 1
+li x4, 4
+li x29, 2
+addi x1, x1, 111
+add x2, x1, x1
+
+# ANDI operation: AND x1 with 0xFF, store result in x2
+andi x2, x1, 1
+
+# OR operation: OR x1 with x2, store result in x3
+or x3, x1, x2
+
+# ORI operation: OR x1 with 0xF0, store result in x4
+ori x4, x0, 1
+
+# SLL operation: Shift x1 left by 4 bits, store result in x5
+sll x5, x1, x4
+
+# SLLI operation: Shift x2 left by 2 bits, store result in x6
+slli x6, x2, 2
+
+# SLT operation: Set x7 to 1 if x1 < x2, else 0
+slt x7, x1, x2
+
+# SLTI operation: Set x8 to 1 if x1 < 0x1000, else 0
+slti x8, x1, 2
+
+# SLTIU operation: Set x9 to 1 if x1 < 0x1000, else 0 (unsigned comparison)
+sltiu x9, x1, 3
+
+# SLTU operation: Set x10 to 1 if x1 < x2 (unsigned comparison), else 0
+sltu x10, x1, x2
+
+# SRA operation: Shift x1 right by 4 bits (sign-extend), store result in x11
+sra x11, x1, x29
+
+# SRAI operation: Shift x2 right by 2 bits (sign-extend), store result in x12
+srai x12, x2, 2
+
+and x6, x2, x3
+ebreak
